@@ -1,10 +1,14 @@
 from fasthtml.common import *
-import anthropic, os, base64, uvicorn
+from mistralai import Mistral
+import os
 
-key = os.environ.get("ANTHROPIC_API_KEY")
-if not key:
-    raise ValueError("Please set the ANTHROPIC_API_KEY environment variable")
-client = anthropic.Anthropic(api_key=key)
+#import anthropic, os, base64, uvicorn
+from dotenv import load_dotenv
+load_dotenv()
+
+key =  os.getenv('MISTRAL_API_KEY')
+model = "pixtral-12b-2409"
+client = Mistral(api_key=key)
 
 app = FastHTML(hdrs=(picolink, Script(open("canvas.js").read(), type="module")))
 
@@ -21,21 +25,29 @@ def home():
 async def process_canvas(image: str):
     image_bytes = await image.read()
     image_base64 = base64.b64encode(image_bytes).decode('utf-8')
-    message = client.messages.create(
-        model="claude-3-haiku-20240307",
-        max_tokens=100,
-        temperature=0.5,
-        messages=[
-           {"role": "user",
-            "content": [
-                {"type": "image",
-                "source": {"type": "base64","media_type": "image/png",
-                "data": image_base64}},
-                {"type": "text",
-                "text": "Write a haiku about this drawing, respond with only that."}
-            ]}]
-    )
-    caption =  message.content[0].text.replace("\n", "<br>")
+    
+    messages = [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "faça um HAIKU sobre o desenho, e apenas isso."
+                    },
+                    {
+ 
+                        "type": "image_url",  "image_url": f"data:image/png;base64,{image_base64}"
+
+                    }]}]
+            
+    chat_response = client.chat.complete(
+            model=model,
+            messages=messages
+            )
+
+    caption = (chat_response.choices[0].message.content.replace("\n", "<br>"))
+
+    #return caption
     return JSONResponse({"caption": caption})
 
 serve()
