@@ -1,68 +1,11 @@
 # FastHTML Example Apps
 
-This repository contains a collection of example applications built using FastHTML, demonstrating various features and use cases. Here are some of the highlighted apps:
+This repository contains a collection of example applications built using FastHTML, showcasing various features and use cases. Below are some of the highlighted apps:
 
-## 1. Game of Life
+## Why I Forked This Repository
 
-An interactive implementation of Conway's Game of Life, showcasing real-time updates and multi-client synchronization through WebSockets.
+I really liked the Pictionary example, but it was using the CLAUDE API. For those who may not know, Claude is not an open-source model, meaning you might not have access to an API key. With that in mind, I decided to rewrite the code to use Pixtral, an API based on Mistral, which is open source. Additionally, I have changed the language to Portuguese (pt-BR).
 
-![Game of Life Animation](00_game_of_life/gol.gif)
+## What's Mistral AI
 
-Key features:
-- Interactive Game of Life grid
-- Real-time updates across multiple clients
-- WebSocket integration for live synchronization
-
-[View Game of Life App](00_game_of_life/)
-
-## 2. Todo App
-
-A simple yet functional Todo list application demonstrating dynamic updates and database integration.
-
-Key features:
-- Add, edit, and delete todo items
-- Mark todos as complete
-- Real-time updates without page reloads
-- SQLite database integration
-
-[View Todo App](01_todo_app/)
-
-## 3. Chatbot
-
-![Chatbot Screenshot](02_chatbot/screenshot.png)
-
-A simple chatbot, showcasing custom styling with [DaisyUI](https://daisyui.com/) for the chat message bubbles. Includes different approaches to handling chat message updates.
-
-[View Chatbot App](02_chatbot/)
-
-## 4. Pictionary
-
-![Pictionary Screenshot](03_pictionary/haiku.gif)
-
-Sending user drawings to a multi-modal AI model for continuous captioning.
-
-[View Pictionary App](03_pictionary/)
-
-## Additional Examples
-
-The remaining examples are a collection of smaller demos and utilities showcasing various features of FastHTML. These are proof-of-concepts and demos rather than full-fledged applications, but should still show some useful patterns and techniques you can use in your own projects.
-
-## Running the Apps
-
-Each app is contained in its own directory. To run an app:
-
-1. Navigate to the app's directory
-2. Install the required dependencies (usually with `pip install -r requirements.txt`)
-3. Run the app using the command specified in the app's README (typically `uvicorn main:app` or `python main.py`)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[MIT License](LICENSE)
-
-## Acknowledgements
-
-These examples were created to showcase the capabilities of [FastHTML](https://github.com/AnswerDotAI/fasthtml), a Python framework for building dynamic web applications.
+Mistral AI is a leading provider of open-source large language models (LLMs) designed to deliver high performance in natural language processing (NLP) tasks. Known for its cutting-edge architecture, Mistral aims to democratize access to powerful AI tools, enabling developers and organizations to integrate sophisticated language models into their applications without relying on proprietary solutions. Mistral models, such as Mistral 7B, are trained with advanced techniques to offer impressive capabilities in text generation, understanding, and reasoning, while maintaining transparency and openness in model design. The open-source nature of Mistral ensures flexibility and fosters innovation in the AI community.
