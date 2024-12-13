@@ -23,3 +23,8 @@ To use the application, follow these steps:
 3. Save the API key in your `.env` file.
 4. Navigate to the `src` folder.
 5. Install dependencies by running:
+
+   ```bash
+   pip install -r packages.txt
+   ```
+
