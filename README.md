@@ -10,7 +10,7 @@ I really liked the Pictionary example, but it was using the CLAUDE API. For thos
 
 Mistral AI is a leading provider of open-source large language models (LLMs) designed to deliver high performance in natural language processing (NLP) tasks. Known for its cutting-edge architecture, Mistral aims to democratize access to powerful AI tools, enabling developers and organizations to integrate sophisticated language models into their applications without relying on proprietary solutions. Mistral models, such as Mistral 7B, are trained with advanced techniques to offer impressive capabilities in text generation, understanding, and reasoning, while maintaining transparency and openness in model design. The open-source nature of Mistral ensures flexibility and fosters innovation in the AI community.
 
-## [Pictionary with Pixtral 12B](https://github.com/CllsPy/fasthtml-example/tree/main/03_pictionary)
+## Pictionary with Pixtral 12B- [LINK](https://github.com/CllsPy/fasthtml-example/tree/main/03_pictionary)
 
 ![mistralai](https://github.com/user-attachments/assets/9bb1576c-0bf2-4028-94db-ecc5183a5127)
 
