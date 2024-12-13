@@ -13,3 +13,13 @@ Mistral AI is a leading provider of open-source large language models (LLMs) des
 ## [Pictionary with Pixtral 12B](https://github.com/CllsPy/fasthtml-example/tree/main/03_pictionary)
 
 ![mistralai](https://github.com/user-attachments/assets/9bb1576c-0bf2-4028-94db-ecc5183a5127)
+
+### Requirements
+
+To use the application, follow these steps:
+
+1. Fork this repository.
+2. Obtain your Mistral API key by visiting [Mistral API Documentation](https://docs.mistral.ai/api/).
+3. Save the API key in your `.env` file.
+4. Navigate to the `src` folder.
+5. Install dependencies by running:
